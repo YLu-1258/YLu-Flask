@@ -1,0 +1,100 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "About Me" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <style>
+        h1 {
+            background:
+                linear-gradient(
+                    to right,
+                    rgba(75,75,75, 1),
+                    rgba(100, 200, 200, 1)
+                ),
+                linear-gradient(
+                    to right,
+                    rgba(255, 0, 0, 1),
+                    rgba(255, 0, 180, 1),
+                    rgba(0, 100, 200, 1)
+            );
+            background-size: 100% 3px, 0 3px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.5s;
+        }
+
+        h1:hover {
+            background-size: 0 3px, 100% 3px;
+        }
+
+        p {
+            color:white;
+            font-weight:600;
+        }
+        ul, li {
+            color:white;
+        }
+
+        a {
+            color: rgb(53, 198, 53);
+            font-weight: 450;
+        }
+
+        a:hover {
+            color: rgb(53, 198, 53);
+            font-weight: 900;
+            transition: font-weight 0.5s ease-in-out
+        }
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:active {
+            text-decoration: none;
+        }
+    </style>
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>Who am I?</strong></h1>
+        <p>My name is Alex Lu and if you want to reach out to me about anything, you can contact me through the methods below!</p>
+        <ul>
+            <li>Discord: Eris29#2693 🎮</li>
+            <li>Email: <a href="mailto:maodou1258@gmail.com" > maodou1258@gmail.com</a> 📧</li>
+            <li>Phone: (858)-688-4567 📱</li>
+        </ul>
+        <p>I am currently a Junior at Del Norte High School taking the APCSP course, I hope to major in computer science in the future and also pursue it as a prospective carreer path in the future</p>
+        <h1 class="text-primary" style="color:fuchsia"><strong style="color:fuchsia">My Hobbies 🎾</strong></h1>
+        <p>I have many hobbies that I do to pass my time, here are just a few of them:</p>
+        <ul>
+            <li>Reading</li>
+            <li>Programming</li>
+            <li>Playing Tennis</li>
+            <li>Watching Youtube Videos</li>
+            <li>Playing Video Games</li>
+            <li>And much more!</li>
+        </ul>
+        <h1 class="text-primary" style="color:rgb(55, 152, 14)"><strong style="color:rgb(55, 152, 14)">My Interests 🔬:</strong></h1>
+        <p>I am interested in anything related to computers, I am currently working on various projects centered around:</p>
+        <ul>
+            <li>Machine Learning 🤖</li>
+            <li>Image processing 🖼️</li>
+            <li>Webscraping 🌐</li>
+            <li>Cyber Security 🐱‍💻</li>
+        </ul>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
